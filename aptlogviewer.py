@@ -98,7 +98,7 @@ with input(files=log_files, openhook=hook_compressed_encoded('UTF-8')) as log_co
 			
 			remove = search("Remove: (.+)", entry)
 			if remove is not None:
-				packages = findall(" ?(.+?):(.+?) \(([0-9.-]+~-)\),?", remove.group(1))
+				packages = findall(" ?(.+?):(.+?) \(([0-9.+~-]*)\),?", remove.group(1))
 				for name, arch, version in packages:
 					pass
 				
