@@ -87,8 +87,8 @@ with input(files=log_files, openhook=hook_compressed_encoded('UTF-8')) as log_co
 			if install is not None:
 				packages = findall(" ?(.+?):(.+?) \(([a-zA-Z0-9.+~-]+)(, automatic)?\),?", install.group(1))
 				for name, arch, version, automatic in packages:
-					if_automatic = True if automatic == ", automatic", else False
-                                        pass
+					if_automatic = True if automatic == ", automatic" else False
+					pass
 			
 			upgrade = search("Upgrade: (.+)", entry)
 			if upgrade is not None:
