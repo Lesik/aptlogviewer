@@ -1,2 +1,2 @@
-# aptlogviewer-gtk
+# aptlogviewer
 (Choose a better sounding name later.)
